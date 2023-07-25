@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class Division {
     public static String rur (double sum) {
-        if ((int) sum % 10 == 1 && (int) sum % 100 != 11) {
+        if (sum % 10 == 1 && sum % 100 != 11) {
             return "рубль";
-        } else if (((int) sum % 10 == 2 || (int) sum % 10 == 3 || (int) sum % 10 == 4)&&
-                (int) sum % 100 != 12 && (int) sum % 100 != 13 && (int) sum % 100 != 14) {
+        } else if ((sum % 10 == 2 || sum % 10 == 3 || sum % 10 == 4)&&
+                sum % 100 != 12 && sum % 100 != 13 && sum % 100 != 14) {
             return "рубля";
         } else {return "рублей";}
     }
