@@ -3,9 +3,10 @@ import java.util.Scanner;
 
 public class Division {
     public static String rur (double sum) {
-        if ((int) sum == 1) {
+        if ((int) sum % 10 == 1 && (int) sum % 100 != 11) {
             return "рубль";
-        } else if ((int) sum == 2 || (int) sum == 3 || (int) sum == 4) {
+        } else if (((int) sum % 10 == 2 || (int) sum % 10 == 3 || (int) sum % 10 == 4)&&
+                (int) sum % 100 != 12 && (int) sum % 100 != 13 && (int) sum % 100 != 14) {
             return "рубля";
         } else {return "рублей";}
     }
@@ -59,7 +60,7 @@ public class Division {
         System.out.println("-".repeat(48));
         System.out.printf("Итого сумма по счету: %.2f %s\t\n", sum, rur(sum));
         System.out.printf("Количество человек: %d\t\t\n", count);
-        System.out.printf("Итого на человека: %.2f руб. %s\t\t\n", sum / count, rur(sum / count));
+        System.out.printf("Итого на человека: %.2f %s\t\t\n", sum / count, rur(sum / count));
     }
 }
 
