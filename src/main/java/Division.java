@@ -34,9 +34,9 @@ public class Division {
                     System.out.printf("Введите стоимость товара%d: ", i);
                     Scanner scanner = new Scanner(System.in);
                     price = scanner.nextDouble();
-                    if (price >= 0) {
+                    if (price > 0) {
                         break;
-                    } else {System.out.print("Ошибка ввода. Цена не может быть отрицательной. ");}
+                    } else {System.out.print("Ошибка ввода. Цена не может быть отрицательной или нулевой. ");}
                 } catch(Exception e) {
                     System.out.print("Ошибка ввода. Введено не число. ");
                 }
